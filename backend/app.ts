@@ -1,19 +1,22 @@
-import express, { Request, Response } from 'express';
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-const port = 3000
+import express, { NextFunction, Request, Response } from "express";
+import logger from "morgan";
+const medianRouter = require("./routes/median");
 
-var app = express();
+const port = 3000;
 
-app.use(logger('dev'));
+const app = express();
+
+app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use("/", medianRouter);
 
-app.get('/', function(req: Request, res: Response) {
-  res.send('hello world')
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+  res.status(500).send(`An error occurred: ${err}`);
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+  console.log(`App listening on port ${port}`);
+});
+
+module.exports = app;

@@ -70,3 +70,6 @@ export const getMedian = (dataPoints: number[]) => {
         middle: [dataPoints[Math.floor(middleDataPoint)]],
       };
 };
+
+export const formatNumber = (amount: number) =>
+  new Intl.NumberFormat("en-CA").format(amount);
