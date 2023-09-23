@@ -10,8 +10,8 @@ describe("Prime numbers utility functions tests", () => {
   });
 
   it("should calculate the correct median from an array of numbers", () => {
-    expect(getMedian([2, 3, 5, 7, 11, 13, 17, 19, 23])).toEqual(11);
-    expect(getMedian([2, 3, 5, 7, 11, 13, 17, 19])).toEqual(9);
+    expect(getMedian([2, 3, 5, 7, 11, 13, 17, 19, 23])).toEqual({median: 11, middle: [11]});
+    expect(getMedian([2, 3, 5, 7, 11, 13, 17, 19])).toEqual({median: 9, middle: [7,11]});
   });
 
   it("should get a correct list of prime numbers", () => {

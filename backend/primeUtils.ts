@@ -60,6 +60,13 @@ export const getMedian = (dataPoints: number[]) => {
   const isLengthEven = dataPoints.length % 2 === 0;
   const middleDataPoint = dataPoints.length / 2;
   return isLengthEven
-    ? (dataPoints[middleDataPoint - 1] + dataPoints[middleDataPoint]) / 2
-    : dataPoints[Math.floor(middleDataPoint)];
+    ? {
+        median:
+          (dataPoints[middleDataPoint - 1] + dataPoints[middleDataPoint]) / 2,
+        middle: [dataPoints[middleDataPoint - 1], dataPoints[middleDataPoint]],
+      }
+    : {
+        median: dataPoints[Math.floor(middleDataPoint)],
+        middle: [dataPoints[Math.floor(middleDataPoint)]],
+      };
 };
