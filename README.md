@@ -1,15 +1,28 @@
-# 🚀 Welcome to your new awesome project!
+# 🚀 Full Stack Challenge TB
 
-This project has been created using **webpack-cli**, you can now run
 
+1. Do you have production experience with Node prior to the submission of this code challenge? If yes, for how long?
+   - **I don't have production experience with Node as the basis of a REST API, however I worked on a project to migrate CMS records where I used Node to run all the interactions with the APIs involved (read/map/insert).**
+
+1. Do you have production experience with React prior to the submission of this code challenge? If yes, for how long?
+   - **Yes, 6+ years of experience.**
+1. Name: **Carlos Garate**
+
+
+**To setup and run the frontend:**
 ```
-npm run build
+npm i
+npm run serve
 ```
 
-or
-
+**To setup and run the backend:**
 ```
-yarn build
+cd backend
+npm i
+npm run dev
 ```
 
-to bundle your application
+**To run tests:**
+```
+npm run test
+```
