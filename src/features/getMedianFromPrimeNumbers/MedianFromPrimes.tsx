@@ -22,6 +22,7 @@ const MedianFromPrimes = () => {
   const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     setError(null);
     medianInputState.onChange(event);
+    setData(null)
   };
 
   const onClickHandler = async () => {
