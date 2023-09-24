@@ -9,7 +9,7 @@ type Props = {
   labelValue?: string;
   name: string;
   placeholder?: string;
-  type?: "text" | "password";
+  type?: "text" | "password" | "number";
   value?: HTMLInputElement["value"];
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 };
@@ -20,11 +20,11 @@ const Input = ({
   value,
   id,
   name,
-  type = "text",
+  type = "number",
   placeholder,
 }: Props) => {
   return (
-    <Box $padding="1rem">
+    <Box style={{ padding: "1rem" }}>
       <VStack>
         <StyledLabel htmlFor={id}>{labelValue}</StyledLabel>
         <StyledInput
