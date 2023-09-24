@@ -4,15 +4,10 @@ import * as http from "http";
 const medianRouter = require("../routes/median");
 
 const testApp = express();
+testApp.use("/", medianRouter);
+const server = testApp.listen(3002);
 
 describe("App tests", () => {
-  let server: http.Server;
-
-  beforeAll(async () => {
-    testApp.use("/", medianRouter);
-    server = testApp.listen(3002);
-  });
-
   it("should send back a 200 code response", (done) => {
     request(server)
       .get("/median/10")

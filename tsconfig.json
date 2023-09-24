@@ -10,9 +10,10 @@
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
     "skipLibCheck": true,
     "moduleResolution": "node",
-    "outDir": "dist",
+    "outDir": "dist"
   },
   "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["./backend"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
