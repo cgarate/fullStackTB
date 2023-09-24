@@ -1,8 +1,13 @@
+import { Box } from "./components/Box";
+import { StyledH } from "./components/StyledH";
+import InputMedianPrimes from "./features/InputMedianPrimes";
+
 const App = () => {
   return (
-    <main>
-      <p>App</p>
-    </main>
+    <Box $width="30vw" $height="100vh">
+      <StyledH $padding="0 1rem">Full Stack Challenge</StyledH>
+     <InputMedianPrimes />
+    </Box>
   );
 };
 
