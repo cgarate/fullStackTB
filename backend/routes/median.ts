@@ -21,7 +21,7 @@ router.get(
       const primeNumberResults = getPrimeNumbersToN(
         req.params.primesUpToLimit as unknown as number,
       );
-      res.send(getMedian(primeNumberResults));
+      res.send({...getMedian(primeNumberResults), limit: req.params.primesUpToLimit});
     } else {
       res.status(400).json({ errors: limit.array() });
     }
