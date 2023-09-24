@@ -11,13 +11,17 @@ export const Button = styled.button`
   padding: 0.5rem 1rem;
   margin: 0 1rem;
   transition: all 0.1s ease-in;
-
   &:hover {
     background-color: #e2b150;ƒ
     transform: translateY(-3px);
   }
-
   &:active {
     background-color: #9a6f19;
+  }
+  &:disabled {
+    opacity: 0.5;
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
   }
 `;
