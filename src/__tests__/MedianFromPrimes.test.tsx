@@ -1,5 +1,5 @@
-import { fireEvent, render, screen, } from "@testing-library/react";
-import userEvent from '@testing-library/user-event'
+import { fireEvent, render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import MedianFromPrimes from "../features/getMedianFromPrimeNumbers/MedianFromPrimes";
 import "@testing-library/jest-dom";
 import InputLimit from "../features/getMedianFromPrimeNumbers/InputLimit";
@@ -32,7 +32,7 @@ describe("MedianFromPrimes feature tests", () => {
     );
     const submitButton = screen.getByRole("button");
     const input = screen.getByRole("spinbutton");
-    await userEvent.type(input, "12")
+    await userEvent.type(input, "12");
     expect(mockonChange).toBeCalledTimes(2);
     await userEvent.click(submitButton);
     expect(mockOnClick).toBeCalledTimes(1);
