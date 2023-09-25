@@ -22,7 +22,7 @@ npm i
 npm run dev
 ```
 
-**To run tests:**
+**To run tests (configured to run separately, run the command from the root for frontend and from /backend for the API tests):**
 ```
 npm run test
 ```
