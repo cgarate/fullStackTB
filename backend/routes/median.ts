@@ -4,7 +4,7 @@ import { formatNumber, getMedian, getPrimeNumbersToN } from "../primeUtils";
 
 const router = express.Router();
 
-const lowerLimit = 1;
+const lowerLimit = 2;
 const upperLimit = 10000000;
 const invalidInputMessage = `Number must be an integer between ${lowerLimit} and ${formatNumber(
   upperLimit,
